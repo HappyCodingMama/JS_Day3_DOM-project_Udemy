@@ -26,7 +26,7 @@ add icon html
    append taskList to ul
 
 8. clear input
-
+--------------------------------------------------
 9. add remove task event 'removeTask'
 function declaration : removeTask
 : remove 'delete-item' contains in class name
@@ -37,7 +37,18 @@ function declaration: clearTasks
 
 11. add filter task event 'filterTasks'
 function declaration: filterTasks
-: 
+
+12. store in LocalStorage
+   function declaration: storeTaskInLocalStorage
+
+13. add DOM load event 'getTasks'
+     function declaration : getTasks
+
+14. remove from local storage
+    function declaration 
+
+15. clear from local storage
+   function declaration
 
 
 

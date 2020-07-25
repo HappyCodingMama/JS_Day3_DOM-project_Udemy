@@ -10,22 +10,22 @@ function loadEventListeners() {
 }
 
 function addTask(e) {
-    if(taskInput.value === '') {
+    if (taskInput.value === '') {
         alert('add a task');
     }
 
     const li = document.createElement('li');
     li.className = 'collection-item';
     li.appendChild(document.createTextNode(taskInput.value));
-    
+
     const link = document.createElement('a');
     link.className = 'delete-item secondary-content';
     link.innerHTML = '<i class="fa fa-times" aria-hidden="true"></i>'
-    
+
     li.appendChild(link);
-    
+
     ulCollect.appendChild(li);
-    
+
     taskInput.value = '';
 
     e.preventDefault();
