@@ -1,7 +1,14 @@
-# JS_Day3_DOM project
+# TaskList app
  JS project for beginners
+ Simple kinds of todoList app with JavaScript 
 
-[Task List]
+## Inspiration
+This app is based on courses by Brad Traversy from Udemy
+
+## What I Did To Make The Project Even Better
+* 
+
+## The Process (Temprory Element - It will be removed)
 1. Define UI Variables
 'task-form' / 'collection' / 'clear-tasks' / filter???? / 'task'
 
