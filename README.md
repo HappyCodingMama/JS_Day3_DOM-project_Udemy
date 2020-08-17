@@ -50,39 +50,40 @@ This app is based on courses by Brad Traversy from Udemy
 1. load event
    'taskList' : Add remove task event, when 'click' implement function 'removeTask'
 2. define function "removeTask"
-   * declare if classList of event target contains 'delete-item', 
+   * declare if 'delete-item' contains in class at parent elements of event target, 
      - then display the confirm box : 'Are you Sure?',
-     - then call method to remove li
+     - then remove 'li''s parent elements of parent elements of event target
+
 3. load event
-   'clearBtn' : Add clear task event, when 'click' implement function 'clearTasks'
+   'clearBtn' : Add clear task event, after 'click' load function 'clearTasks'
 4. define function "clearTasks"
    * clear Task using while statement, not innerHtml 
 
 5. load event
- 'filter' : Add filter task event, when 'keyup' implement function 'filterTasks'
+ 'filter' : Add filter task event, after 'keyup' load function 'filterTasks'
 6. define function "filterTasks"
-   * create variable text : assignment value of event target to lower case 
+   * create variable text : assignment - call method to  to lower case to value of event target
    * select all node of class : 'collection-item', 
      - execute a provided function once for each array element,
    * provided function: argument -> task
-     - create variable item : assignment  returns the first node of 'task',
-                                  then, use textContent to get the element's text content  
-                                  if  there is not a matching is not equal in the index of text,  
-                                  then show on a webpage
-		                            otherwise, hide it.
+     - create variable item : 
+       assignment the element's text content at the first node of 'task',                     
+       if  there is not a matching is not equal item to lower case in the index of text,  
+       then show on a webpage otherwise, hide it.
+
 
 <strong> [ Step 3. Persist To Local Storage ] </strong>
+
 
 1. Store in local storage
    * call another function about localStorage in function addTask 
       - put taskInput value in the function
 2. define function "storeTaskInLocalStorage", argument is "task"
    * define and initialize variable tasks
-   * if the localStorage item is empty, then 'tasks' is empty array
+   * if the getting localStorage item is empty, then 'tasks' is empty array
      - otherwise, 'tasks' assigns stored items transforms into a javaScript object
-     - add elements to the variable 'task'
-   * set adding 'tasks' to the local storage
-     - stored as a string
+   * add task elements to the variable 'tasks'
+   * set adding 'tasks' to the local storage and store as a string
 
 3. load event 
    DOM : after 'DOMContentLoaded', call 'getTasks'
@@ -91,7 +92,7 @@ This app is based on courses by Brad Traversy from Udemy
    * define and initialize variable tasks
    * if the localStorage item is empty, then 'tasks' is empty array
      - otherwise, 'tasks' assigns stored items transforms into a javaScript object
-     - Loop through tasks, executes a provided function once for each array element
+   * Loop through tasks, executes a provided function once for each array element
      - put contents of function addTask in the function
 
 5. Remove from localstorage
@@ -100,12 +101,12 @@ This app is based on courses by Brad Traversy from Udemy
    * define and initialize variable tasks
    * if the localStorage item is empty, then 'tasks' is empty array
      - otherwise, 'tasks' assigns stored items transforms into a javaScript object
-     - Loop through tasks, executes a provided function, has two parameters task, index
+
+   * Loop through tasks, executes a provided function, has two parameters task, index
        if task equals the current task in the iteration, then remove 1 in index in 'tasks'
 
    * set local storage again
-     - set adding 'tasks' to the local storage
-     - stored as a string
+     - set adding 'tasks' to the local storage and store as a string
 
 6. Clear from localstorage
    * call clearTasksFromLocalStorage with any argument
